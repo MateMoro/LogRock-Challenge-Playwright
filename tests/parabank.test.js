@@ -1,10 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
 test('Automate Parabank flow', async ({ page }) => {
-    // Navegar para o site
     await page.goto('https://parabank.parasoft.com/parabank/index.htm');
 
-    // Registrar um novo usuário
     await page.click('text=Register');
     await page.fill('input[name="customer.firstName"]', 'Mate');
     await page.fill('input[name="customer.lastName"]', 'Moro');
